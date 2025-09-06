@@ -4,7 +4,9 @@ SELECT  b.booking_id,
         b.start_date,
         b.end_date,
         u.user_id,
-        u.username
+        u.first_name,
+        u.last_name,
+        u.email
 FROM bookings b
 INNER JOIN users u ON b.user_id = u.user_id;  
 
