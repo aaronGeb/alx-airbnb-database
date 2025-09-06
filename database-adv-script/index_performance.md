@@ -33,5 +33,3 @@ This document presents the performance analysis of key queries before and after 
 - Indexes significantly improved the performance of our queries by reducing execution time and improving index size. 
 - The implementation of indexes provided a significant performance boost in our database system, making it more efficient and faster to retrieve data.
 - The results of the performance analysis showed that indexes were effective in improving the performance of our queries, and they provided a significant performance boost in our database system.
-- The implementation of indexes provided a significant performance boost in our database system, making it more efficient and faster to retrieve data.
-- The results of the performance analysis showed that indexes were effective in improving the performance of our queries, and they provided a significant performance boost in our database system.
