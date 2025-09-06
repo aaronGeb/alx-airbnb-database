@@ -4,9 +4,9 @@ This document presents the performance analysis of key queries before and after 
 
 ## Test Environment
 - Database: MYSQL 8.0.18
-- CPU: Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz
+- Chip: Apple M1 Pro
 - RAM: 16GB
-- OS:  MacOS Catalina 10.15.4
+- OS:  MacOS macOS Sonoma version 14.0
 - Total Records:
   - Users: 20,000
   - Bookings: 10,000
