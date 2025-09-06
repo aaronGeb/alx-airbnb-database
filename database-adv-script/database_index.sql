@@ -1,10 +1,6 @@
 -- database_index_mysql.sql
--- For MySQL 8.0.18+
--- ======================
-
-/* ------------------------
-   Query performance check
-   ------------------------ */
+-- Query performance check
+   
 EXPLAIN ANALYZE
 SELECT u.user_id, u.email, COUNT(b.booking_id) 
 FROM users u 
@@ -12,10 +8,8 @@ LEFT JOIN bookings b ON u.user_id = b.user_id
 GROUP BY u.user_id, u.email;
 
 
-/* ------------------------
-   Create indexes (no IF NOT EXISTS in MySQL)
-   Use SHOW INDEX FROM table_name; to verify
-   ------------------------ */
+-- Create indexes Use SHOW INDEX FROM table_name; to verify
+
 CREATE INDEX idx_users_email       ON users(email);
 CREATE INDEX idx_users_last_name   ON users(last_name);
 CREATE INDEX idx_users_created_at  ON users(created_at);
@@ -35,18 +29,13 @@ CREATE INDEX idx_properties_city           ON properties(city);
 CREATE INDEX idx_bookings_user_dates ON bookings(user_id, check_in_date, check_out_date);
 CREATE INDEX idx_properties_location ON properties(city, property_type, status);
 
-
-/* ------------------------
-   Update statistics
-   ------------------------ */
+-- Update statistics
+  
 ANALYZE TABLE users;
 ANALYZE TABLE bookings;
 ANALYZE TABLE properties;
 
-
-/* ------------------------
-   Test queries
-   ------------------------ */
+-- Test queries
 
 -- Test 1: User booking search
 EXPLAIN ANALYZE
@@ -78,11 +67,8 @@ WHERE b.status = 'completed'
 GROUP BY u.user_id, u.email
 HAVING COUNT(b.booking_id) > 5;
 
-
-/* ------------------------
-   Index and table statistics
-   ------------------------ */
-
+-- Index and table statistics
+  
 -- Indexes on a table
 SHOW INDEX FROM users;
 SHOW INDEX FROM bookings;
