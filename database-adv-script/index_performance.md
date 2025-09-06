@@ -6,7 +6,7 @@ This document presents the performance analysis of key queries before and after 
 - Database: MYSQL 8.0.18
 - Chip: Apple M1 Pro
 - RAM: 16GB
-- OS:  MacOS macOS Sonoma version 14.0
+- OS:  MacOS Sonoma version 14.0
 - Total Records:
   - Users: 20,000
   - Bookings: 10,000
